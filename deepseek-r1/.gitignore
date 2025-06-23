@@ -1,0 +1,6 @@
+venv
+__pycache__
+
+DeepSeek-R1-Distill-*
+notebook_utils.py
+genai_helper.py
