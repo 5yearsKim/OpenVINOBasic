@@ -19,7 +19,8 @@ def process_file(path: Path):
     new_text, count = pattern.subn(replacer, text)
     if count:
         path.write_text(new_text, encoding='utf-8')
-        print(f"  → Updated {path.relative_to(Path.cwd())}")
+        print(f"  → Updated {path}")
+
 
 EXCLUDE_DIRS = {'venv', '.venv', '__pycache__'}
 
