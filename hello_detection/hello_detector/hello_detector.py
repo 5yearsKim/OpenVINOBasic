@@ -5,6 +5,9 @@ import openvino as ov
 
 class HelloDetector:
     def __init__(self, model_path: str, device: str = "CPU") -> None:
+        # __init__ 함수를 완성해보자.
+
+        # ---start---
         core = ov.Core()
 
         model = core.read_model(model=model_path)
@@ -12,8 +15,13 @@ class HelloDetector:
 
         self.input_layer_ir = self.compiled_model.input(0)
         self.output_layer_ir = self.compiled_model.output("boxes")
+        # ---end---
 
     def detect(self, image):
+        # detect 함수를 완성해보자.
+
+        # ---start---
+
         # N,C,H,W = batch size, number of channels, height, width.
         N, C, H, W = self.input_layer_ir.shape
 
@@ -32,6 +40,8 @@ class HelloDetector:
         boxes = boxes[~np.all(boxes == 0, axis=1)]
 
         return boxes, resized_image
+
+        # ---end---
 
     # For each detection, the description is in the [x_min, y_min, x_max, y_max, conf] format:
     # The image passed here is in BGR format with changed width and height. To display it in colors expected by matplotlib, use cvtColor function
@@ -89,3 +99,4 @@ class HelloDetector:
                     )
 
         return rgb_image
+    

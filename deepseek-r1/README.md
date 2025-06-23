@@ -2,7 +2,7 @@
 
 # 참고
 
-- {local_url}/lab/tree/notebooks/hello-detection/hello-detection.ipynb
+- {local_url}/lab/workspaces/auto-s/tree/deepseek-r1/deepseek-r1.ipynb
 
 # 목표
 

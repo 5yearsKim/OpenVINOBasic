@@ -5,6 +5,7 @@ from llm_config import convert_and_compress_model
 
 
 class TextGenerator:
+    # ---start---
     def __init__(self):
         model_id = "DeepSeek-R1-Distill-Qwen-1.5B"
         compression_variant = "INT4"
@@ -49,4 +50,6 @@ class TextGenerator:
 
         result = self.pipe.generate(prompt, generation_config, streamer)
         return result
+    
+    # ---end---
 

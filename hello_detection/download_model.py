@@ -2,6 +2,7 @@ from pathlib import Path
 
 from notebook_utils import download_file
 
+
 base_model_dir = Path("./model").expanduser()
 
 model_name = "horizontal-text-detection-0001"

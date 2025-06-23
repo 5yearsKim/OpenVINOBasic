@@ -1,3 +1,6 @@
+
+# ---start---
+
 import sys
 from pathlib import Path
 
@@ -73,3 +76,5 @@ def streamer(subword):
 input_prompt = "What is OpenVINO?"
 print(f"Input text: {input_prompt}")
 result = pipe.generate(input_prompt, generation_config, streamer)
+
+# ---end---

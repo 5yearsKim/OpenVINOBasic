@@ -6,6 +6,7 @@ import openvino as ov
 # 변환시켜보자.
 # 변환 후 ./ckpts/model.xml 로 저장하자.
 # 참고: https://docs.openvino.ai/2025/openvino-workflow/model-preparation/convert-model-pytorch.html
+
 # ---start---
 
 model = torchvision.models.resnet50(weights='DEFAULT')
