@@ -45,6 +45,4 @@ python inference.py
 --- 
 
 ## 참조
-- [Conventional Convert from PyTorch](https://docs.openvino.ai/2025/openvino-workflow/model-preparation/convert-model-pytorch.html)
-- [OpenVINO Quantization](https://docs.openvino.ai/2025/openvino-workflow/model-optimization-guide/quantizing-models-post-training/basic-quantization-flow.html)
-
+- [Optimum LLM Conversion](https://docs.openvino.ai/2025/openvino-workflow-generative/inference-with-optimum-intel.html)
