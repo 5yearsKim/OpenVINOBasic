@@ -35,7 +35,7 @@ python convert.py
 python quantize.py
 ---
 
-> 양자화된 모델은 `ckpts/quantized_model.xml`로 저장됩니다.
+> 양자화된 모델은 `ckpts/quantized_model.xml`로 저장됨.
 
 ---
 

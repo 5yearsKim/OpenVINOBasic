@@ -23,8 +23,13 @@ def transform_fn(data_item):
 calibration_dataset = nncf.Dataset(calibration_loader, transform_fn)
 
 
+# convert.py 에서 변환한 모델을 읽어 nncf 로 양자화 시켜보자.
+# 양자화된 모델을 ./ckpts/quantized_model.xml 에 저장해보자.
+# ---start---
+
 model = ov.Core().read_model("./ckpts/model.xml")
 
 quantized_model = nncf.quantize(model, calibration_dataset)
 
 ov.save_model(quantized_model, "./ckpts/quantized_model.xml")
+# ---end---
