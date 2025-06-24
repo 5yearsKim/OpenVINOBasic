@@ -8,39 +8,14 @@ class HelloDetector:
         # __init__ 함수를 완성해보자.
 
         # ---start---
-        core = ov.Core()
-
-        model = core.read_model(model=model_path)
-        self.compiled_model = core.compile_model(model=model, device_name=device)
-
-        self.input_layer_ir = self.compiled_model.input(0)
-        self.output_layer_ir = self.compiled_model.output("boxes")
+# Fill your code
         # ---end---
 
     def detect(self, image):
         # detect 함수를 완성해보자.
 
         # ---start---
-
-        # N,C,H,W = batch size, number of channels, height, width.
-        N, C, H, W = self.input_layer_ir.shape
-
-        # Resize the image to meet network expected input sizes.
-        resized_image = cv2.resize(image, (W, H))
-
-        # Reshape to the network input shape.
-        input_image = np.expand_dims(resized_image.transpose(2, 0, 1), 0)
-
-        # plt.imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
-
-        # Create an inference request.
-        boxes = self.compiled_model([input_image])[self.output_layer_ir]
-
-        # Remove zero only boxes.
-        boxes = boxes[~np.all(boxes == 0, axis=1)]
-
-        return boxes, resized_image
-
+# Fill your code
         # ---end---
 
     # For each detection, the description is in the [x_min, y_min, x_max, y_max, conf] format:

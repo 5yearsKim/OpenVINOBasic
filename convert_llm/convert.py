@@ -7,13 +7,6 @@ from optimum.intel import OVModelForCausalLM
 # https://docs.openvino.ai/2025/openvino-workflow-generative/inference-with-optimum-intel.html
 
 # ---start---
-
-model_id = "microsoft/Phi-3-mini-4k-instruct"
-
-model = OVModelForCausalLM.from_pretrained(model_id, export=True, load_in_8bit=True)
-
-# save the model after optimization
-model.save_pretrained('./ckpts/phi3_8bit')
-
+# Fill your code
 # ---end---
 

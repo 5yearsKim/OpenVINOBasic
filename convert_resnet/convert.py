@@ -8,10 +8,5 @@ import openvino as ov
 # 참고: https://docs.openvino.ai/2025/openvino-workflow/model-preparation/convert-model-pytorch.html
 
 # ---start---
-
-model = torchvision.models.resnet50(weights='DEFAULT')
-ov_model = ov.convert_model(model,  example_input=torch.rand(1, 3, 224, 224))
-
-ov.save_model(ov_model, './ckpts/model.xml')
-
+# Fill your code
 # ---end---
