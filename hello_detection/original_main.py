@@ -4,6 +4,15 @@ import cv2
 import matplotlib.pyplot as plt
 import numpy as np
 import openvino as ov
+import requests
+
+if not Path("notebook_utils.py").exists():
+    r = requests.get(
+        url="https://raw.githubusercontent.com/openvinotoolkit/openvino_notebooks/latest/utils/notebook_utils.py",
+    )
+
+    open("notebook_utils.py", "w").write(r.text)
+
 
 from notebook_utils import download_file
 
@@ -125,9 +134,9 @@ def convert_result_to_image(
 
 
 img = convert_result_to_image(image, resized_image, boxes, conf_labels=False)
-plt.imshow(img)
 
 plt.figure(figsize=(10, 6))
+plt.imshow(img)
 plt.axis("off")
 
 plt.show()

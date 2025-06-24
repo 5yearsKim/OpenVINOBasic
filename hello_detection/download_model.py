@@ -1,5 +1,15 @@
 from pathlib import Path
 
+import requests
+
+if not Path("notebook_utils.py").exists():
+    r = requests.get(
+        url="https://raw.githubusercontent.com/openvinotoolkit/openvino_notebooks/latest/utils/notebook_utils.py",
+    )
+
+    open("notebook_utils.py", "w").write(r.text)
+
+
 from notebook_utils import download_file
 
 
